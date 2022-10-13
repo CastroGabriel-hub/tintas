@@ -1,6 +1,11 @@
 <template>
   <label for="area">Informe a área a ser pintada: </label>
   <input type="text" name="area" v-model="area">
+
+  <button @click="calcLatas(area)">Apenas latas de 18L</button>
+  <button @click="calcGaloes(area)">Apenas Galões de 3.6L</button>
+
+  <p>{{ message }}</p>
 </template>
 
 <script>
@@ -11,8 +16,19 @@ export default {
   data() {
     return {
       area : 0,
+      message : "",
     }
     
+  },
+
+  methods : {
+    calcLatas(area){
+      
+    },
+
+    calcGaloes(area){
+
+    }
   }
 
 }
