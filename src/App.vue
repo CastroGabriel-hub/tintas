@@ -23,11 +23,21 @@ export default {
 
   methods : {
     calcLatas(area){
+      let litersNeeded = area / 6;
+      let latasNeeded = Math.round(litersNeeded / 18);
+      latasNeeded === 0 ? latasNeeded = 1 : null;
+      let latasPrice = latasNeeded * 80;
       
+      this.message = `Você precisa comprar ${latasNeeded} latas de tinta, que custarão R$ ${latasPrice}`;
     },
 
     calcGaloes(area){
+      let litersNeeded = area / 6;
+      let galoesNeeded = Math.round(litersNeeded / 3.6);
+      galoesNeeded === 0 ? galoesNeeded = 1 : null;
+      let galoesPrice = galoesNeeded * 25;
 
+      this.message = `Você precisa comprar ${galoesNeeded} galões de tinta, que custarão R$ ${galoesPrice}`;
     }
   }
 
